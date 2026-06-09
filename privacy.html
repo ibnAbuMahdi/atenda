@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy – Atenda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #0D5C3A;
+    --green-light: #14784D;
+    --green-pale: #E8F5EE;
+    --gold: #F4A922;
+    --gold-dark: #D9900F;
+    --dark: #0F1B2D;
+    --dark-2: #1A2C42;
+    --cream: #FAFAF7;
+    --text: #1C2B1F;
+    --muted: #6B7F72;
+    --white: #FFFFFF;
+    --border: #D8E6DC;
+    --radius: 16px;
+    --shadow: 0 4px 24px rgba(13,92,58,0.10);
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250,250,247,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 6vw; height: 64px;
+  }
+  .nav__logo { display: flex; align-items: center; text-decoration: none; }
+  .nav__logo-img { height: 32px; width: auto; object-fit: contain; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--green); }
+
+  /* ── LEGAL HEADER ── */
+  .legal-header {
+    padding: 140px 6vw 60px;
+    background: linear-gradient(135deg, var(--green-pale) 0%, var(--cream) 100%);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .company-meta { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--green); font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .legal-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--dark); letter-spacing: -1px; line-height: 1.2; margin-bottom: 1rem; }
+  .doc-info-bar { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.85rem; color: var(--muted); }
+  .doc-info-item strong { color: var(--dark); }
+
+  /* ── GUIDE BOX ── */
+  .guide-box {
+    background: var(--white); border-left: 4px solid var(--gold); padding: 1.5rem; border-radius: 0 var(--radius) var(--radius) 0;
+    box-shadow: var(--shadow); margin-top: 2rem; max-width: 1200px;
+  }
+  .guide-box h4 { font-family: 'Syne', sans-serif; color: var(--dark); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+
+  /* ── MAIN LAYOUT ── */
+  .legal-container {
+    max-width: 1400px; margin: 0 auto; padding: 60px 6vw;
+    display: grid; grid-template-columns: 280px 1fr; gap: 4rem;
+  }
+
+  /* ── SIDEBAR ── */
+  .legal-sidebar { position: sticky; top: 104px; height: calc(100vh - 140px); overflow-y: auto; padding-right: 1rem; }
+  .sidebar-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 1rem; }
+  .sidebar-menu { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .sidebar-menu a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; display: block; padding: 0.5rem 0.75rem; border-radius: 8px; transition: all 0.2s; }
+  .sidebar-menu a:hover, .sidebar-menu a.active { color: var(--green); background: var(--green-pale); font-weight: 600; }
+
+  /* ── CONTENT BODY ── */
+  .legal-content { max-width: 840px; }
+  .legal-section { margin-bottom: 4rem; scroll-margin-top: 100px; }
+  .legal-section h2 { font-family: 'Syne', sans-serif; font-size: 1.75rem; color: var(--dark); margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+  .legal-section h3 { font-family: 'Syne', sans-serif; font-size: 1.3rem; color: var(--green); margin-top: 2rem; margin-bottom: 1rem; }
+  .legal-section p { margin-bottom: 1.25rem; color: var(--text); }
+  
+  /* Clauses & Subsections */
+  .clause-block { margin-bottom: 1.5rem; }
+  .clause-title { font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
+  .sub-list { list-style: none; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem; }
+  .sub-list li { position: relative; }
+  .sub-list li::before { content: ""; position: absolute; left: -1.25rem; top: 0.65rem; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+  /* Specific Section Callouts */
+  .badge-container { display: inline-block; background: var(--green-pale); color: var(--green); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+  .parent-theme .badge-container { background: #fef4e2; color: var(--gold-dark); }
+  .parent-theme h2 { border-color: #fef4e2; }
+
+  /* Note banner within sections */
+  .note-banner { background: var(--white); border: 1px dashed var(--border); padding: 1.25rem; border-radius: 12px; font-size: 0.9rem; color: var(--muted); margin: 1.5rem 0; }
+  .note-banner strong { color: var(--dark); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark-2); padding: 3rem 6vw; border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--white); text-decoration: none; }
+  .footer-logo span { color: var(--gold); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { color: rgba(255,255,255,0.45); font-size: 0.85rem; text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-copy { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+
+  @media (max-width: 900px) {
+    .legal-container { grid-template-columns: 1fr; gap: 2rem; }
+    .legal-sidebar { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav__logo" id="logo-link">
+    <img src="atenda_logo.png" alt="Atenda Logo" class="nav__logo-img" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="index.html#why">Why Atenda</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- LEGAL HEADER -->
+<header class="legal-header">
+  <div class="company-meta">Atenda Ltd — Innovation for Education</div>
+  <h1 class="legal-title">Platform Privacy Policy</h1>
+  <p style="color: var(--muted); max-width: 700px;">Detailed architecture on how Atenda systematically collects, deploys, archives, and immunizes personal data components.</p>
+  
+  <div class="doc-info-bar">
+    <div class="doc-info-item">Document: <strong>Privacy Policy</strong></div>
+    <div class="doc-info-item">Version: <strong>1.0</strong></div>
+    <div class="doc-info-item">Effective Date: <strong>01 January, 2026</strong></div>
+    <div class="doc-info-item">Last Updated: <strong>09 June, 2026</strong></div>
+  </div>
+
+  <div class="guide-box">
+    <h4>📋 How to Read This Document</h4>
+    <p style="font-size: 0.92rem; color: var(--text); margin: 0;">This policy is structurally segmented to accommodate multiple data touchpoints: <strong>Section A (Privacy directives for Schools)</strong> and <strong>Section B (Privacy directives for Parents and Guardians)</strong>. Please review the specific sections detailing your compliance context.</p>
+  </div>
+</header>
+
+<!-- MAIN CONTENT WRAPPER -->
+<div class="legal-container">
+  
+  <!-- STICKY SIDEBAR -->
+  <aside class="legal-sidebar">
+    <div class="sidebar-title">Policy Sections</div>
+    <ul class="sidebar-menu">
+      <li><a href="#intro" class="active">1. Intro & Legal Bases</a></li>
+      <li><a href="#controller">2. Data Controller Entities</a></li>
+      <li><a href="#schools-collection">3. Information Collected</a></li>
+      <li><a href="#schools-usage">4. Processing & Deployment</a></li>
+      <li><a href="#schools-security">5. Archive & Security Protocol</a></li>
+      <li><a href="#schools-retention">6. Data Retention Limits</a></li>
+      <li><a href="#schools-sharing">7. Controlled Data Sharing</a></li>
+      <li><a href="#schools-obligations">8. School Controller Duties</a></li>
+      <li><a href="#parents-records">9. Held Parent Profiles</a></li>
+      <li><a href="#parents-usage">10. Use of Parent Matrix</a></li>
+      <li><a href="#parents-children">11. Heightened Child Care</a></li>
+      <li><a href="#parents-rights">12. Data Subject Rights</a></li>
+      <li><a href="#parents-notifications">13. System Notifications</a></li>
+      <li><a href="#parents-tracking">14. Cookie & Session Logic</a></li>
+      <li><a href="#parents-complaints">15. Regulatory Redress</a></li>
+      <li><a href="#policy-changes">16. Policy Amendments</a></li>
+      <li><a href="#policy-governing">17. National Legislation</a></li>
+    </ul>
+  </aside>
+
+  <!-- CONTENT PANELS -->
+  <main class="legal-content">
+    
+    <!-- 1. INTRO -->
+    <section id="intro" class="legal-section">
+      <h2>1. Introduction and Legal Basis</h2>
+      <p>Atenda Ltd is intensely dedicated to shielding the visual privacy and personal data matrices of all individuals interacting with the Atenda Platform ecosystem. This comprehensive Privacy Policy sets out how Atenda handles information assets in total structural compliance with the Nigeria Data Protection Regulation (NDPR) 2019, the Nigeria Data Protection Act 2023, and all concurrent operational data codes in Nigeria.</p>
+      <p>Atenda processes operational data components based strictly on the following lawful parameters:</p>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) <strong>Contractual necessity</strong> — To completely fulfill and provision the active web platform software capabilities to onboarding Schools as mapped in the Subscription Agreement.</li>
+          <li>(b) <strong>Legitimate interest</strong> — To monitor, preserve, protect, and refine the execution performance of the multi-tenant tech environment for schools, administrators, and parents.</li>
+          <li>(c) <strong>Legal obligation</strong> — To structurally comply with statutory demands or oversight criteria flagged under Nigerian jurisprudence.</li>
+          <li>(d) <strong>Consent</strong> — Where processing routines rely on explicit data subject confirmation, consent parameters will be cleared explicitly and can be withdrawn dynamically by the individual at any moment.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. CONTROLLER -->
+    <section id="controller" class="legal-section">
+      <h2>2. Data Controller and Contact</h2>
+      <p>Atenda Ltd acts specifically as the **Data Controller** in respect of data structures generated directly by Atenda (including School Admin corporate profiles, contact information, subscription invoices, platform analytical logs, and support interactions). Individual onboarding Schools act fundamentally as the primary **Data Controllers** regarding student and parental databases input into the infrastructure — with Atenda acting explicitly as a **Data Processor** operating strictly on the School's structural command.</p>
+      
+      <div class="note-banner" style="border-left: 3px solid var(--green);">
+        <strong>Data Protection Officer — Atenda Ltd</strong><br/>
+        Email: <a href="mailto:hello@atenda.ng" style="color: var(--green);">info@atenda.ng</a><br/>
+        WhatsApp: 09010814234<br/>
+        Phone: 07067555836
+	Address: 4, Opposite Khalifa's Roundabout, Murtala Muhammad Way, Birnin-Kebbi, Birnin Kebbi, Kebbi State, Nigeria
+      </div>
+    </section>
+
+    <!-- SECTION A -->
+    <section id="schools-collection" class="legal-section">
+      <div class="badge-container">Section A — For Schools</div>
+      <h2>3. What Data Atenda Collects from Schools</h2>
+      <p>In operating the integrated software space, Atenda processes the following parameters on behalf of the School:</p>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) <strong>School identification data:</strong> Formal school name, dedicated subdomain architecture, geographical address, state location, and local government area (LGA) tracking, plus institutional logo uploads.</li>
+          <li>(b) <strong>School Admin and staff data:</strong> Full names, active telephone lines, business email profiles, corporate roles, and operational login structures (passwords are systematically shielded as irreversible bcrypt hashes — never stored in plain text formats).</li>
+          <li>(c) <strong>Student data (Logged strictly by the School):</strong> Full names, biological date of birth, gender attributes, system-assigned admission values, passport photograph uploads, classroom allocations, historical institutional data, state of origin matrices, religion, complete guardian contact cards, and critical medical alerts.</li>
+          <li>(d) <strong>Academic data (Logged strictly by the School):</strong> Individual course scores, assessment tracking, term-based examination parameters, classroom roll-call maps, compiled report card printouts, and structured remarks from instructional staff.</li>
+          <li>(e) <strong>Fee data (Logged strictly by the School):</strong> Institutional fee blueprints, logged financial payments, transaction execution dates, payment styles, and digital receipt archives.</li>
+          <li>(f) <strong>Subscription data:</strong> System-generated subscription statements, student metric snapshots logged at term-lock events, transaction histories, and contract tracking parameters.</li>
+          <li>(g) <strong>Usage and audit data:</strong> Immutable logs documenting all computational actions completed on the platform workspace, charting identity vectors, timestamps, and modification values for system integrity.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-usage" class="legal-section">
+      <h2>4. How Atenda Uses School Data</h2>
+      <p>Atenda deploys the processed information matrices explicitly for the following operational workflows:</p>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) To cleanly render, power, stabilize, and map the custom software tools assigned to the School's subdomain space.</li>
+          <li>(b) To permit authorized Atenda deployment specialists to configure workspace architectures, troubleshoot software bugs, or provide structural technical support when requested by School management.</li>
+          <li>(c) To auto-compile subscription profiles, map operational billing tiers, and handle institutional account metrics with Atenda.</li>
+          <li>(d) To route operational notification templates over WhatsApp API or email networks concerning term metrics, system updates, and billing windows.</li>
+          <li>(e) To track hosting environment safety, intercept malicious brute-force attempts, and safeguard platform structural health.</li>
+          <li>(f) To evolve software modularity using entirely anonymized, desensitized, and aggregated performance benchmarks that cannot trace or reveal any unique school or data subject identity.</li>
+          <li>(g) <strong>Strict Limitation:</strong> Atenda will never parse, process, deploy, or review student records, school details, or parental numbers for marketing, user profiling, profiling models, or commercial pipelines separate from powering the core software space.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-security" class="legal-section">
+      <h2>5. Data Storage and Security</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) All system databases and structural archives are maintained inside modern, hardened cloud servers managed by globally premier cloud infrastructure providers. Atenda leverages rigid physical, technical, and architectural logic to shield personal data vectors from unauthorized capture or leakage.</li>
+          <li>(b) Core technical defenses incorporate: End-to-end encrypted transmission tunnels (HTTPS/TLS), bcrypt-hashed password layers, strict multi-tenant isolation patterns (guaranteeing that individual school databases are isolated logically and cannot be accessed or breached by separate platform tenants), and comprehensive systemic access tracking.</li>
+          <li>(c) Atenda initiates recurring technical configuration scans and internal posture updates across all deployment pipelines.</li>
+          <li>(d) In alignment with national compliance provisions, if a verified data breach occur that threatens data subject profiles, Atenda will formally alert the affected Schools and the Nigeria Data Protection Commission (NDPC) within seventy-two (72) hours of threat verification.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-retention" class="legal-section">
+      <h2>6. Data Retention — Schools</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Atenda archives active database assets, including student records and grade logs, for the entire duration that the School preserves an active, paid account structure on the platform.</li>
+          <li>(b) Following formal closure of a School's account, data assets are preserved for a safety buffer of ninety (90) days to facilitate institutional extraction routines. Once this window passes, all user tables are programmatically overwritten and purged from primary databases.</li>
+          <li>(c) Baseline financial logs, subscription invoices, and core technical security logs may be safely archived for up to seven (7) years to align with corporate audit and regulatory compliance frameworks.</li>
+          <li>(d) School management can file for specific category data purges at any time by coordinating directly with the Atenda Data Protection Officer. Processing occurs within thirty (30) days.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-sharing" class="legal-section">
+      <h2>7. Data Sharing — Schools</h2>
+      <p>Atenda maintains a strict zero-monetization stance on data assets. Information parameters are shared strictly under the following operational scopes:</p>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Shared securely with data-processor cloud storage vendors for the explicit intent of maintaining system performance. These providers operate under tight processing limitations.</li>
+          <li>(b) Routed through integrated WhatsApp Business API nodes and enterprise email delivery systems strictly to execute transactional messages configured by the School.</li>
+          <li>(c) Disclosed to judicial bodies or federal law enforcement frameworks only when validated by a binding legal court directive or strict statutory compliance call under Nigerian jurisdiction.</li>
+          <li>(d) Rendered directly to the School's internal staff in absolute sync with the roles and administrative clearance levels mapped by the School management.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-obligations" class="legal-section">
+      <h2>8. School's Obligations as Data Controller</h2>
+      <p>Because the School commands the definitive processing context regarding student and parental information, the School fundamentally owns the Data Controller status under law and:</p>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Must explicitly clarify to parents, guardians, and staff that information profiles are safely processed through the Atenda digital workspace, matching requirements under the NDPR.</li>
+          <li>(b) Must secure valid processing approvals before adding student fields or distributing access logs for the Parent Portal.</li>
+          <li>(c) Must handle information correction workflows and serve as the direct contact node for data subjects attempting to trigger privacy rights requests.</li>
+          <li>(d) Must completely avoid uploading files or information arrays that it lacks a valid legal title or processing right to handle.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION B -->
+    <section id="parents-records" class="legal-section parent-theme">
+      <div class="badge-container">Section B — For Parents & Guardians</div>
+      <h2>9. What Data Atenda Holds About Parents</h2>
+      <p>When an administrative unit configures a profile path inside the Parent Portal, the system processes the following data segments:</p>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Guardian's formal identity parameters and documented relationship to the respective student.</li>
+          <li>(b) Direct telephone lines, WhatsApp data numbers, and personal email frameworks.</li>
+          <li>(c) System validation keys — Phone tracking credentials and account PIN layouts (completely encrypted via irreversible hashing logic).</li>
+          <li>(d) Portal activity timelines — Documenting precise dates, timestamps, and login milestones for verification safety.</li>
+          <li>(e) Messaging files generated during active communication within the Portal workspace.</li>
+        </ul>
+      </div>
+      <div class="note-banner">
+        <strong>📋 Note on Information Origin:</strong> All parental data held on the platform is gathered by the School during enrollment or setup. Atenda does not harvest guardian data independently. The School retains the role of Data Controller; Atenda handles processing strictly under institutional instructions.
+      </div>
+    </section>
+
+    <section id="parents-usage" class="legal-section parent-theme">
+      <h2>10. How Parent Data is Used</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) To securely initialize, authorize, and run the personal dashboard access paths for the guardian.</li>
+          <li>(b) To push system notifications over text/WhatsApp API as requested by the School — including immediate report card updates, fee logging logs, and unexpected student absence notices.</li>
+          <li>(c) To run the basic transactional chat interface linking parents directly to the School Admin units.</li>
+          <li>(d) To track login logs to maintain database security.</li>
+          <li>(e) <strong>Data Guarantee:</strong> Parental profiles are never analyzed, utilized, or forwarded for third-party commercial mapping, product tracking, or external communication loops.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="parents-children" class="legal-section parent-theme">
+      <h2>11. Children's Data</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Atenda understands that student information sets track underage data subjects under 18 years of age. Atenda maintains heightened digital barriers and defensive logic to shield minor profiles.</li>
+          <li>(b) Minor data fields are never evaluated for targeted profiling, commercial ads, tracking, or behavior mapping.</li>
+          <li>(c) Information is protected from third-party lookup vectors outside core cloud data storage vendors (mapped in Clause 7).</li>
+          <li>(d) Academic summaries are accessible exclusively to: the School's authorized staff elements, verified guardians logging in via secure PIN, and Atenda technical support staff strictly for database troubleshooting.</li>
+          <li>(e) Atenda blocks direct registration pipelines for minors; all child accounts are generated by institutional administrators or verified guardians.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="parents-rights" class="legal-section parent-theme">
+      <h2>12. Parent Rights Under NDPR</h2>
+      <p>As an absolute data subject inside the framework of the Nigeria Data Protection Regulation 2019 and the Nigeria Data Protection Act 2023, you hold the following statutory capabilities:</p>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) <strong>Right of access:</strong> The capability to call for a comprehensive copy of your processed personal data matrices.</li>
+          <li>(b) <strong>Right to rectification:</strong> The capability to adjust flawed or incorrectly formatted records. (Note: Student performance inputs or financial balances can only be adjusted by the School Admin).</li>
+          <li>(c) <strong>Right to erasure:</strong> The capability to demand data purges, subject to administrative retention rules.</li>
+          <li>(d) <strong>Right to restrict processing:</strong> The capability to limit active data processing routines under unique circumstances.</li>
+          <li>(e) <strong>Right to data portability:</strong> The capability to demand an electronic structural download of your personal data fields in machine-readable format.</li>
+          <li>(f) <strong>Right to object:</strong> The capability to challenge processing systems running under legitimate interest grounds.</li>
+        </ul>
+      </div>
+      <p>To launch these privileges, please reach out to the School's administrative office first, as they act as the Data Controller. For requests involving data managed directly by Atenda, contact our DPO at <a href="mailto:info@atenda.ng">info@atenda.ng</a>. Processing completes within thirty (30) days.</p>
+    </section>
+
+    <section id="parents-notifications" class="legal-section parent-theme">
+      <h2>13. Notifications and Communications</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) The Platform triggers automated WhatsApp messaging routines on direct command from the School. These templates are configured entirely by the School Admin unit.</li>
+          <li>(b) Guardians can adjust notification pathways by requesting adjustments from their respective School Admins.</li>
+          <li>(c) Atenda will never send unsolicited marketing materials or cross-sell unrelated products to parent contacts.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="parents-tracking" class="legal-section parent-theme">
+      <h2>14. Cookies and Tracking</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) The Atenda workspace relies strictly on secure session cookies to retain user validation details during an active login block. These files never monitor your navigation choices across outside web platforms.</li>
+          <li>(b) Atenda incorporates zero third-party behavior metrics, conversion pixels, or tracking networks that profile user digital habits.</li>
+          <li>(c) Essential system validation cookies cannot be deactivated without logging off the Platform space.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="parents-complaints" class="legal-section parent-theme">
+      <h2>15. Complaints</h2>
+      <p>If you identify compliance gaps regarding how your information values are treated, you retain the full right to lodge a formal statutory complaint with the <strong>Nigeria Data Protection Commission (NDPC)</strong> by visiting <a href="https://www.ndpc.gov.ng" target="_blank">www.ndpc.gov.ng</a>. Atenda encourages individuals to reach out to our internal privacy team first to guarantee rapid dispute resolution.</p>
+    </section>
+
+    <section id="policy-changes" class="legal-section">
+      <h2>16. Changes to this Privacy Policy</h2>
+      <p>Atenda reserves the right to adjust this Privacy Policy to reflect technical platform enhancements, system changes, or national legal adjustments. Schools will receive notifications of structural changes minimum fourteen (14) days prior to execution via the software hub or official WhatsApp channels. The active update layer is always open for analysis at <a href="#">atenda.ng/privacy</a>.</p>
+    </section>
+
+    <section id="policy-governing" class="legal-section">
+      <h2>17. Governing Law</h2>
+      <p>This Privacy Policy is systematically formulated, validated, and managed under the exclusive national laws of the Federal Republic of Nigeria, strictly incorporating the Nigeria Data Protection Regulation 2019 and the Nigeria Data Protection Act 2023.</p>
+    </section>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="nav__logo" id="logo-link">
+        <img src="atenda_logo.png" alt="Atenda Logo" class="nav__logo-img" />
+  </a>
+  <div class="footer-links">
+    <a href="index.html#products">Products</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Atenda. Built in Nigeria 🇳🇬</div>
+</footer>
+
+<script>
+  // Dynamic Scroll Highlighting for Sidebar Menu
+  const links = document.querySelectorAll('.sidebar-menu a');
+  const sections = document.querySelectorAll('.legal-section');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 120) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    links.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href').includes(current)) {
+        a.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>

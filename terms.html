@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms and Conditions – Atenda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #0D5C3A;
+    --green-light: #14784D;
+    --green-pale: #E8F5EE;
+    --gold: #F4A922;
+    --gold-dark: #D9900F;
+    --dark: #0F1B2D;
+    --dark-2: #1A2C42;
+    --cream: #FAFAF7;
+    --text: #1C2B1F;
+    --muted: #6B7F72;
+    --white: #FFFFFF;
+    --border: #D8E6DC;
+    --radius: 16px;
+    --shadow: 0 4px 24px rgba(13,92,58,0.10);
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(250,250,247,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 6vw; height: 64px;
+  }
+  .nav__logo { display: flex; align-items: center; text-decoration: none; }
+  .nav__logo-img { height: 32px; width: auto; object-fit: contain; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--green); }
+
+  /* ── LEGAL HEADER ── */
+  .legal-header {
+    padding: 140px 6vw 60px;
+    background: linear-gradient(135deg, var(--green-pale) 0%, var(--cream) 100%);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .company-meta { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--green); font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+  .legal-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--dark); letter-spacing: -1px; line-height: 1.2; margin-bottom: 1rem; }
+  .doc-info-bar { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; font-size: 0.85rem; color: var(--muted); }
+  .doc-info-item strong { color: var(--dark); }
+
+  /* ── GUIDE BOX ── */
+  .guide-box {
+    background: var(--white); border-left: 4px solid var(--gold); padding: 1.5rem; border-radius: 0 var(--radius) var(--radius) 0;
+    box-shadow: var(--shadow); margin-top: 2rem; max-width: 1200px;
+  }
+  .guide-box h4 { font-family: 'Syne', sans-serif; color: var(--dark); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+
+  /* ── MAIN LAYOUT ── */
+  .legal-container {
+    max-width: 1400px; margin: 0 auto; padding: 60px 6vw;
+    display: grid; grid-template-columns: 280px 1fr; gap: 4rem;
+  }
+
+  /* ── SIDEBAR ── */
+  .legal-sidebar { position: sticky; top: 104px; height: calc(100vh - 140px); overflow-y: auto; padding-right: 1rem; }
+  .sidebar-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 1rem; }
+  .sidebar-menu { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+  .sidebar-menu a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; display: block; padding: 0.5rem 0.75rem; border-radius: 8px; transition: all 0.2s; }
+  .sidebar-menu a:hover, .sidebar-menu a.active { color: var(--green); background: var(--green-pale); font-weight: 600; }
+
+  /* ── CONTENT BODY ── */
+  .legal-content { max-width: 840px; }
+  .legal-section { margin-bottom: 4rem; scroll-margin-top: 100px; }
+  .legal-section h2 { font-family: 'Syne', sans-serif; font-size: 1.75rem; color: var(--dark); margin-bottom: 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
+  .legal-section h3 { font-family: 'Syne', sans-serif; font-size: 1.3rem; color: var(--green); margin-top: 2rem; margin-bottom: 1rem; }
+  .legal-section p { margin-bottom: 1.25rem; color: var(--text); }
+  
+  /* Clauses & Subsections */
+  .clause-block { margin-bottom: 1.5rem; }
+  .clause-title { font-weight: 700; color: var(--dark); margin-bottom: 0.5rem; }
+  .sub-list { list-style: none; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem; }
+  .sub-list li { position: relative; }
+  .sub-list li::before { content: ""; position: absolute; left: -1.25rem; top: 0.65rem; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+  /* Definitions Grid */
+  .definitions-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
+  .definition-card { background: var(--white); border: 1px solid var(--border); padding: 1.25rem; border-radius: 12px; }
+  .definition-term { font-family: 'Syne', sans-serif; font-weight: 700; color: var(--green); margin-bottom: 0.25rem; }
+
+  /* Specific Section Callouts */
+  .badge-container { display: inline-block; background: var(--green-pale); color: var(--green); padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
+  .parent-theme .badge-container { background: #fef4e2; color: var(--gold-dark); }
+  .parent-theme h2 { border-color: #fef4e2; }
+
+  /* Affirmation Container Box */
+  .affirmation-container { background: var(--white); border-left: 4px solid var(--green); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; margin-top: 4rem; box-shadow: var(--shadow); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark-2); padding: 3rem 6vw; border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--white); text-decoration: none; }
+  .footer-logo span { color: var(--gold); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { color: rgba(255,255,255,0.45); font-size: 0.85rem; text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-copy { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+
+  @media (max-width: 900px) {
+    .legal-container { grid-template-columns: 1fr; gap: 2rem; }
+    .legal-sidebar { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav__logo" id="logo-link">
+    <img src="atenda_logo.png" alt="Atenda Logo" class="nav__logo-img" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#products">Products</a></li>
+    <li><a href="index.html#why">Why Atenda</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- LEGAL HEADER -->
+<header class="legal-header">
+  <div class="company-meta">Atenda Ltd — Innovation for Education</div>
+  <h1 class="legal-title">Platform Terms and Conditions</h1>
+  <p style="color: var(--muted); max-width: 700px;">Governing the structural use ecosystem of the Atenda school management platform across private primary and secondary educational frameworks.</p>
+  
+  <div class="doc-info-bar">
+    <div class="doc-info-item">Document: <strong>Terms and Conditions</strong></div>
+    <div class="doc-info-item">Version: <strong>1.0</strong></div>
+    <div class="doc-info-item">Effective Date: <strong>01 January, 2026</strong></div>
+    <div class="doc-info-item">Last Updated: <strong>09 June, 2026</strong></div>
+  </div>
+
+  <div class="guide-box">
+    <h4>📋 How to Read This Document</h4>
+    <p style="font-size: 0.92rem; color: var(--text); margin: 0;">This document contains specific structural legal agreements itemized into distinct sections: <strong>Section A (Addressed directly to Schools)</strong> and <strong>Section B (Addressed directly to Parents)</strong>. Please read and evaluate the structural section that directly applies to your platform access context.</p>
+  </div>
+</header>
+
+<!-- MAIN CONTENT WRAPPER -->
+<div class="legal-container">
+  
+  <!-- STICKY SIDEBAR -->
+  <aside class="legal-sidebar">
+    <div class="sidebar-title">Document Structure</div>
+    <ul class="sidebar-menu">
+      <li><a href="#definitions" class="active">1. Definitions</a></li>
+      <li><a href="#schools-acceptance">2. Acceptance of Terms</a></li>
+      <li><a href="#schools-access">3. Platform Access & Subs</a></li>
+      <li><a href="#schools-responsibilities">4. School Obligations</a></li>
+      <li><a href="#schools-data">5. Data Ownership</a></li>
+      <li><a href="#schools-rights">6. Atenda's Framework</a></li>
+      <li><a href="#schools-ip">7. Intellectual Property</a></li>
+      <li><a href="#schools-termination">8. Suspension & End</a></li>
+      <li><a href="#schools-liability">9. Limits of Liability</a></li>
+      <li><a href="#schools-governing">10. Governing Law</a></li>
+      <li><a href="#parents-portal">11. Parent Portal Access</a></li>
+      <li><a href="#parents-responsibilities">12. Parent Obligations</a></li>
+      <li><a href="#parents-accuracy">13. Record Accuracy</a></li>
+      <li><a href="#parents-messaging">14. Platform Messaging</a></li>
+      <li><a href="#parents-termination">15. Access Deactivation</a></li>
+      <li><a href="#agreement-affirmation">Execution Framework</a></li>
+    </ul>
+  </aside>
+
+  <!-- CONTENT PANELS -->
+  <main class="legal-content">
+    
+    <!-- 1. DEFINITIONS -->
+    <section id="definitions" class="legal-section">
+      <h2>1. Definitions</h2>
+      <p>In these Terms and Conditions, the following operational terms maintain the explicit structural meanings set out comprehensively below:</p>
+      
+      <div class="definitions-grid">
+        <div class="definition-card">
+          <div class="definition-term">"Atenda"</div>
+          <p style="font-size: 0.9rem; margin: 0;">Atenda Ltd, a Nigerian technology company registered within the Federal Republic of Nigeria, operating the technical frameworks of the Atenda school management platform.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"Platform"</div>
+          <p style="font-size: 0.9rem; margin: 0;">The Atenda web-based school management software, systematically accessible via individual school-specific subdomains mapped directly at *.atenda.ng.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"School"</div>
+          <p style="font-size: 0.9rem; margin: 0;">Any private primary or secondary educational institution that has entered into a formal subscription arrangement with Atenda and been systematically granted administrative entry to the Platform.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"School Admin"</div>
+          <p style="font-size: 0.9rem; margin: 0;">Any individual person expressly authorized by the School to administer and manage the School's operational framework on the Platform, including proprietors, principals, administrators, bursars, and teachers.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"Parent"</div>
+          <p style="font-size: 0.9rem; margin: 0;">Any parent or designated legal guardian of an active student enrolled at an onboarding School utilizing the Platform, who has been securely granted access parameters to the interactive Parent Portal.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"Student"</div>
+          <p style="font-size: 0.9rem; margin: 0;">Any pupil or student systematically enrolled and tracked at a School that utilizes the operational metrics of the Platform.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"Parent Portal"</div>
+          <p style="font-size: 0.9rem; margin: 0;">The restricted read-only segment of the Platform accessible securely to parents, through which they may seamlessly observe their child's academic performance results, attendance metrics, and term-based fee payment profiles.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"Subscription"</div>
+          <p style="font-size: 0.9rem; margin: 0;">The specialized term-based fee structures operationalized and paid by the School entity to Atenda to retain operational access to the web Platform mechanics.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"Term"</div>
+          <p style="font-size: 0.9rem; margin: 0;">An active academic term structure as defined specifically by each School's unique structural and operational academic calendar setup.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"Personal Data"</div>
+          <p style="font-size: 0.9rem; margin: 0;">Any information relating to an identified or identifiable natural data subject, as systematically interpreted under the Nigeria Data Protection Regulation (NDPR) 2019 and contemporary national data statutes.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"Content"</div>
+          <p style="font-size: 0.9rem; margin: 0;">All raw data, academic records, digital documents, metadata, and systemic materials uploaded to or generated live through the Platform infrastructure by the School or its associated School Admins.</p>
+        </div>
+        <div class="definition-card">
+          <div class="definition-term">"Agreement"</div>
+          <p style="font-size: 0.9rem; margin: 0;">These comprehensive Terms and Conditions, unified strategically alongside the accompanying Privacy Policy and any supplementary documents appended by standard structural reference.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION A -->
+    <section id="schools-acceptance" class="legal-section">
+      <div class="badge-container">Section A — For Schools</div>
+      <h2>2. Acceptance of Terms</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) By registering a tailored School profile account on the Platform, completing an digital onboarding framework with Atenda, or permitting any School Admin to access the system, the School confirms that it has fully read, understood, and agrees to be bound by these Terms and Conditions.</li>
+          <li>(b) The School's authorized representative — typically the primary proprietor or executive school principal — is deemed to have accepted these Terms on behalf of the School entity and all operational School Admins operating under that structural account setup.</li>
+          <li>(c) Atenda reserves the explicit right to modify or update these Terms at any time. Schools will be systematically notified of material structural changes at least fourteen (14) days in advance via the Platform interface or official WhatsApp broadcast channel. Continued execution of the Platform after the effective date constitutes affirmative acceptance of the revised Terms.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-access" class="legal-section">
+      <h2>3. Platform Access and Subscription</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Atenda grants the School a non-exclusive, non-transferable, revocable licence to access and deploy the Platform interface for the School's internal administrative and academic logistics, subject to explicit alignment with these Terms and timely layout of the Subscription.</li>
+          <li>(b) The Subscription is calculated on a per-term basis, formulated as a flat fee per active student mapped inside the system at the exact timeframe of the academic term lock mechanism. The specific applicable fee parameters per student are mutually agreed upon during baseline onboarding and may be reviewed with at least thirty (30) days' structural notice.</li>
+          <li>(c) The School's structural Subscription invoice is auto-generated immediately when the School Admin locks an active academic term. Payment is due strictly within the grace period parameters specified in the School's specific onboarding paperwork, which sits at fourteen (14) days by default.</li>
+          <li>(d) Failure to settle the Subscription parameters within the structural grace timeline may result in restricted access controls to the Platform interface, as systematically set out in Clause 8. Full workspace capacities are restored immediately upon live electronic confirmation of payment.</li>
+          <li>(e) The Platform is served strictly on an "as-is" and "as-available" blueprint. Atenda makes no structural guarantee of zero-interruption availability but will use standard reasonable commercial efforts to guarantee optimal hosting uptime and notify configurations of planned server maintenance.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-responsibilities" class="legal-section">
+      <h2>4. School Responsibilities</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) The School retains sole legal responsibility for the direct accuracy, validity, and structural integrity of all operational content entered into the Platform space, including student archives, score structures, attendance records, and operational fee profiles.</li>
+          <li>(b) The School is structurally liable for ensuring that all onboarding School Admins operate within the parameters of these Terms. The School must guarantee that individual access credentials are securely guarded and never shared between staff elements.</li>
+          <li>(c) The School must rapidly alert the support infrastructure of Atenda if it identifies or suspects any unauthorized entry attempt or data compromise involving its Platform profile.</li>
+          <li>(d) The School is strictly liable for securing all necessary parental and guardian consents required under Nigerian legal frameworks before systematically enrolling student data elements on the Platform or granting interactive profile paths to the Parent Portal.</li>
+          <li>(e) The School must never deploy the Platform for any illegal or unauthorized processing actions, or in any format that could impair, disable, or structurally collapse the hosting performance of the software environment.</li>
+          <li>(f) The School is completely restricted from attempting to access or parse any separate school entity's records, accounts, or isolated databases sitting on the multi-tenant Platform.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-data" class="legal-section">
+      <h2>5. Data Ownership and School Content</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) All localized student profiles, academic logs, fee structures, and administrative outputs uploaded into the Platform space by the School remain the exclusive property of the School. Atenda structural layouts claim no legal title over any processed School Content.</li>
+          <li>(b) The School grants Atenda a limited, royalty-free license to host, store, transfer, process, and dynamically present the School's Content exclusively for the direct purpose of serving the Platform mechanics.</li>
+          <li>(c) Upon programmatic termination of the School's account structure, Atenda will preserve the database archive for a strict timeline of ninety (90) days, during which the School may make a formal application for a full data export. After this structural window, data may be irreversibly purged.</li>
+          <li>(d) Atenda will never sell, lease, or distribute the School's Content matrix to any external third party except as structurally demanded by active law or as mandatory to power the essential core systems of the Platform, as mapped within the Privacy Policy.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-rights" class="legal-section">
+      <h2>6. Atenda's Rights and Responsibilities</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Atenda will make available reasonable remote technical support features to the School infrastructure via official WhatsApp and email interfaces during standard commercial working hours.</li>
+          <li>(b) Atenda's deployment and support specialists may securely access the School's system account explicitly to offer functional technical assistance, finish onboarding administrative workflows at the School's call, or fix reported software bugs. All access instances are written directly to the system's unalterable audit trail.</li>
+          <li>(c) Atenda will use standard modern protocols to protect the systemic security and parameters of the Platform and data arrays, as mapped extensively in the integrated Privacy Policy.</li>
+          <li>(d) Atenda holds the right to tweak, modernize, or retire specialized modular features of the Platform at any stage. Where a core feature change occurs, Atenda will provide a minimum of thirty (30) days' advance notification.</li>
+          <li>(e) Atenda is entirely exempt from liability regarding any structural data loss that flows directly from the School's internal mismanagement, accidental staff deletion parameters, or insecure sharing of administrative credentials.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-ip" class="legal-section">
+      <h2>7. Intellectual Property</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) The Platform architecture, tracking code, visual designs, UI components, custom branding, and all technological features developed by Atenda remain the explicit, exclusive intellectual property of Atenda Ltd. These structural Terms offer the School zero ownership vectors over the code frameworks.</li>
+          <li>(b) The School's unique corporate logo, structural name, and institutional branding materials uploaded into the system environment remain the individual intellectual property of the School.</li>
+          <li>(c) The School is strictly prohibited from reverse-engineering, duplication, resale, distribution, or copying any element of the Atenda Platform ecosystem without definitive written clearance from Atenda Ltd.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-termination" class="legal-section">
+      <h2>8. Suspension and Termination</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Atenda retains the active right to limit the School's administrative operations on the Platform if an active Subscription invoice slips past the defined grace timeline. Restricted mode stops new academic score logging, report card compiling, new student profiles, and fee design routing. Historical data repositories remain viewable.</li>
+          <li>(b) Atenda may immediately freeze or dissolve the School's account space if the School violates these core Terms and fails to clear the identified breach within seven (7) days of an official written alert.</li>
+          <li>(c) The School can terminate its platform engagement at any milestone by offering official written cancellation to Atenda. Early termination loops do not grant the School any right to refunds for term fees already cleared.</li>
+          <li>(d) Upon account closure, Clauses 5 (Data Ownership), 7 (Intellectual Property), 9 (Limitation of Liability), and 10 (Governing Law) shall remain completely in force.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-liability" class="legal-section">
+      <h2>9. Limitation of Liability</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) To the absolute degree permitted under the laws of the Federal Republic of Nigeria, Atenda's total collective financial liability for any operational disruptions or legal actions flowing from the deployment of the Platform shall never cross the net cumulative Subscription fees cleared by the specific School inside the immediate three (3) month timeline preceding the action giving rise to liability.</li>
+          <li>(b) Atenda stands completely exempt from any indirect, circumstantial, consequential, or unique damage pathways, including severe data loss (driven by School admin mistakes), lost educational revenues, or institutional reputational impacts flowing from platform downtime.</li>
+          <li>(c) Atenda makes no absolute warranty that software operations will be entirely error-free. Atenda will deploy standard infrastructure patches to minimize software interruptions.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="schools-governing" class="legal-section">
+      <h2>10. Governing Law</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) These Terms and Conditions are systematically governed, construed, and validated under the active laws of the Federal Republic of Nigeria. Any operational dispute or structural argument arising from this setup shall first undergo direct good-faith negotiations between both corporate entities. If unresolved within thirty (30) days, the matter shall be forwarded to mediation frameworks under Nigerian law before any standard court filings can occur.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION B -->
+    <section id="parents-portal" class="legal-section parent-theme">
+      <div class="badge-container">Section B — For Parents & Guardians</div>
+      <h2>11. Parent Portal Access</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Profile paths to the secure Parent Portal are delivered strictly to verified parents or legal guardians of students actively tracked inside an onboarding School utilizing the Atenda framework. Access profiles are managed and provisioned directly by the School Admin, not by Atenda.</li>
+          <li>(b) The parent space is configured inside the system by the School Admin. Login profiles (mobile number and a temporary PIN architecture) are issued directly to the parent by the School staff. The parent must change their baseline PIN at the absolute first login milestone.</li>
+          <li>(c) The Parent Portal operates exclusively as a read-only environment. Parents may seamlessly evaluate academic report summaries, live attendance maps, and historical fee payments. Parents maintain zero system access to edit, forge, or wipe data arrays.</li>
+          <li>(d) A parent with multiple children enrolled within the same identical school framework can link and swap between all student profiles via a unified single login dashboard.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="parents-responsibilities" class="legal-section parent-theme">
+      <h2>12. Parent Obligations</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) The individual parent is entirely liable for protecting the absolute confidentiality of their secure login PIN. Atenda is completely exempt from data leaks flowing from a parent exposing their access credentials to outside individuals.</li>
+          <li>(b) Parents must immediately alert the School's physical administration (not Atenda directly) if they suspect a PIN compromise or identify structural formatting errors in the data arrays shown in the Portal space. The School retains complete management over individual record adjustments.</li>
+          <li>(c) The parent must never attempt to bypass portal structures, access unauthorized student profiles, or probe the administrative software core of the Platform.</li>
+          <li>(d) The Parent Portal is delivered strictly as a supplementary data visualization framework. It never acts as a replacement for physical structural engagements with the School regarding critical student tracking.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="parents-accuracy" class="legal-section parent-theme">
+      <h2>13. Accuracy of Information</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) All academic metrics, scores, attendance logs, and financial balances presented inside the Parent Portal are managed directly by the School's staff. Atenda performs no verification routines on the data accuracy or financial balances input by School Admins.</li>
+          <li>(b) Atenda is completely exempt from legal liability for errors, omissions, or delays in the data displayed in the Parent Portal. All data disputes must be settled directly with the School.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="parents-messaging" class="legal-section parent-theme">
+      <h2>14. Messaging</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) Parents may seamlessly route informational messages to the School Admin directly inside the Parent Portal framework, dynamically segmented as Fee Enquiry, Result Enquiry, or General Enquiry.</li>
+          <li>(b) Atenda does not screen, audit, moderate, or take liability for the text content or context of messages sent back and forth between parents and School Admins.</li>
+          <li>(c) Response timelines remain completely under the administrative control of the School. Atenda gives zero guarantees regarding response milestones.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="parents-termination" class="legal-section parent-theme">
+      <h2>15. Termination of Parent Access</h2>
+      <div class="clause-block">
+        <ul class="sub-list">
+          <li>(a) A parent's secure profile path can be instantly locked or deactivated by the School Admin at any time, including milestones where a student leaves the school framework or the institution's primary Platform subscription closes.</li>
+          <li>(b) Atenda may drop access parameters to the parent framework if the entire system environment is restricted or terminated for non-compliance, as mapped in Clause 8.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SYSTEMIC ONBOARDING AGREEMENT DISCLOSURE -->
+    <section id="agreement-affirmation" class="legal-section">
+      <div class="affirmation-container">
+        <h3 style="margin-top:0; font-size: 1.5rem; color: var(--dark); font-family: 'Syne', sans-serif; margin-bottom: 1rem;">16. System Affirmation & Execution</h3>
+        <p style="font-size: 1.05rem; color: var(--text); font-weight: 500;">Please note that this ecosystem does not require physical or separate written ink execution layers. The School or its designated Administrative units have fully, structurally, and legally agreed to these unified Terms and Conditions by providing Atenda with introductory onboarding institution data and through the continuous, active use of the software platform environment.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="index.html" class="nav__logo" id="logo-link">
+        <img src="atenda_logo.png" alt="Atenda Logo" class="nav__logo-img" />
+  </a>
+  <div class="footer-links">
+    <a href="index.html#products">Products</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 Atenda. Built in Nigeria 🇳🇬</div>
+</footer>
+
+<script>
+  // Dynamic Scroll Highlighting for Sidebar Menu
+  const links = document.querySelectorAll('.sidebar-menu a');
+  const sections = document.querySelectorAll('.legal-section');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 120) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    links.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href').includes(current)) {
+        a.classList.add('active');
+      }
+    });
+  });
+</script>
+</body>
+</html>
